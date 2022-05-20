@@ -9,8 +9,13 @@ import java.util.List;
 public class MarketplaceService {
 
     // Inyectar el repositorio en la capa Service
-    @Autowired
-    private  MarketplaceRepository marketplaceRepository;
+    //PREGUNTAR COMO FUNCIONA CON AUROWIRED.
+//    @Autowired
+//    private  MarketplaceRepository marketplaceRepository;
+    private final MarketplaceRepository marketplaceRepository;
+    public MarketplaceService( MarketplaceRepository marketplaceRepository){
+        this.marketplaceRepository = marketplaceRepository;
+    }
 
     // Crear el método
     public List<Marketplace> getAllMarketplace() {
