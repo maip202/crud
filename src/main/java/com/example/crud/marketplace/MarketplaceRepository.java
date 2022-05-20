@@ -7,7 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MarketplaceRepository extends JpaRepository<Marketplace, Long> {
 
-
-
-
 }
