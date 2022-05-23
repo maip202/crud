@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MarketplaceService {
@@ -21,4 +22,9 @@ public class MarketplaceService {
     public List<Marketplace> getAllMarketplace() {
         return marketplaceRepository.findAll();
     }
+
+    public Optional<Marketplace> getMarketplacetById(Long id) {
+        return marketplaceRepository.findById(id);
+    }
+
 }
